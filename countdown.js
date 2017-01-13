@@ -5,10 +5,12 @@ var countdownGenerator = function (x) {
 
   return function () {
     count -= 1;
+
     if (count > 0) {
       return console.log(output[0] + ' ' + count + '...');
     }
-    if (count = 0) {
+    //can start with 0 to make sure you are not assigning
+    if (count === 0) {
       return console.log(output[1]);
     }
     return console.log(output[2]);
